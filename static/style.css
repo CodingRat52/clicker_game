@@ -1,29 +1,92 @@
 
 :root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
+    --bg-color: #f0f4f8;
+    --text-color: #333;
+    --primary-color: #4caf50;
+    --accent-color: #ff9800;
+    --button-bg: #ffffff;
+    --button-hover: #e0e0e0;
+    --border-radius: 12px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
     --bg-color: #121212;
     --text-color: #ffffff;
+    --button-bg: #1e1e1e;
+    --button-hover: #2a2a2a;
+}
+
+[data-theme="dark"] button {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: #fff;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    font-family: Arial, sans-serif;
-    margin-top: 50px;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2em;
+    margin: 10px 0 30px;
+}
+
+button, input {
+    font-size: 1rem;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button {
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 5px;
+    background-color: var(--button-bg);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
 }
 
 input {
-    padding: 8px;
-    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-width: 200px;
+}
+
+ol {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0;
+    list-style-position: inside;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button, input {
+        width: 90%;
+        max-width: 300px;
+    }
 }

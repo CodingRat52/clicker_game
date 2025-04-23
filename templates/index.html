@@ -1,25 +1,25 @@
 
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="lv" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <title>Enhanced Clicker Game</title>
+    <title>Klikšķināšanas Spēle</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Clicker Game</h1>
-    <h2>Score: <span id="score">0</span></h2>
-    <button id="click-btn">Click Me!</button>
+    <h1>Klikšķināšanas Spēle</h1>
+    <h2>Punkti: <span id="score">0</span></h2>
+    <button id="click-btn">Spied mani!</button>
     <br><br>
-    <button id="upgrade-click">Upgrade Click (+1)</button>
-    <button id="auto-clicker">Buy Auto Clicker</button>
+    <button id="upgrade-click">Uzlabot klikšķi (+1)</button>
+    <button id="auto-clicker">Pirkt Auto Klikšķinātāju</button>
     <br><br>
-    <input type="text" id="username" placeholder="Enter your name">
-    <button id="save-score">Save Score</button>
-    <button id="reset-game">Reset</button>
+    <input type="text" id="username" placeholder="Ievadi savu vārdu">
+    <button id="save-score">Saglabāt punktus</button>
+    <button id="reset-game">Atiestatīt</button>
     <br><br>
-    <button id="toggle-theme">Toggle Dark Mode</button>
-    <h3>Leaderboard</h3>
+    <button id="toggle-theme">Pārslēgt tumšo režīmu</button>
+    <h3>Top saraksts</h3>
     <ol id="leaderboard">
         {% for row in scores %}
             <li>{{ row['name'] }} - {{ row['score'] }}</li>
