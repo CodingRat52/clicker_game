@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Enhanced Clicker Game</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Clicker Game</h1>
+    <h2>Score: <span id="score">0</span></h2>
+    <button id="click-btn">Click Me!</button>
+    <br><br>
+    <button id="upgrade-click">Upgrade Click (+1)</button>
+    <button id="auto-clicker">Buy Auto Clicker</button>
+    <br><br>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button id="save-score">Save Score</button>
+    <button id="reset-game">Reset</button>
+    <br><br>
+    <button id="toggle-theme">Toggle Dark Mode</button>
+    <h3>Leaderboard</h3>
+    <ol id="leaderboard">
+        {% for row in scores %}
+            <li>{{ row['name'] }} - {{ row['score'] }}</li>
+        {% endfor %}
+    </ol>
+    <script src="/static/script.js"></script>
+</body>
+</html>
